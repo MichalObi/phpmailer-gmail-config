@@ -15,14 +15,17 @@ $mail->IsSMTP();
 $mail->Host = "smtp.gmail.com";
 $mail->SMTPAuth = true;
 $mail->SMTPSecure = "ssl";
-$mail->Username = "michal.apibara@gmail.com";
-$mail->Password = "virtualo123";
+
+/* To change */
+$mail->Username = "login@gmail.com";
+$mail->Password = "pass";
+
 $mail->Port = "465";
 
 $mail->setFrom($email, $name);
 $mail->addAddress($email_to);     							
 
-$mail->Subject = 'Wiadomość z formularza strony apibara.pl';
+$mail->Subject = 'Wiadomość z formularza strony xxx';
 $mail->Body    = $message;
 
 if(!$mail->send()) {
